@@ -121,23 +121,265 @@ end
 ### Конфигурация Spine2:
 
 ```
+! device: Spine2 (vEOS-lab, EOS-4.29.2F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname Spine2
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description p2p-leaf1
+   mtu 9214
+   no switchport
+   ip address 10.0.2.6/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet2
+   description p2p-leaf2
+   mtu 9214
+   no switchport
+   ip address 10.0.2.8/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet3
+   description p2p-leaf3
+   mtu 9214
+   no switchport
+   ip address 10.0.2.10/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Loopback0
+   description Router-ID
+   ip address 10.0.0.2/32
+!
+interface Loopback1
+   description VTEP
+   ip address 10.0.1.2/32
+!
+interface Management1
+!
+ip routing
+!
+router ospf 1
+   router-id 10.0.0.2
+   max-lsa 12000
+!
+end
 
 ```
 
 ### Конфигурация Leaf1:
 
 ```
+! device: Leaf1 (vEOS-lab, EOS-4.29.2F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname Leaf1
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description p2p-spine1
+   mtu 9214
+   no switchport
+   ip address 10.0.2.1/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet2
+   description p2p-spine2
+   mtu 9214
+   no switchport
+   ip address 10.0.2.7/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Loopback0
+   description Router-ID
+   ip address 10.0.0.11/32
+!
+interface Loopback1
+   description VTEP
+   ip address 10.0.1.11/32
+!
+interface Management1
+!
+ip routing
+!
+router ospf 1
+   router-id 10.0.0.11
+   max-lsa 12000
+!
+end
 
 ```
 
 ### Конфигурация Leaf2:
 
 ```
+! device: Leaf2 (vEOS-lab, EOS-4.29.2F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname Leaf2
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description p2p-spine1
+   mtu 9214
+   no switchport
+   ip address 10.0.2.3/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet2
+   description p2p-spine2
+   mtu 9214
+   no switchport
+   ip address 10.0.2.9/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Loopback0
+   description Routed-ID
+   ip address 10.0.0.12/32
+!
+interface Loopback1
+   description VTEP
+   ip address 10.0.1.12/32
+!
+interface Management1
+!
+ip routing
+!
+router ospf 1
+   router-id 10.0.0.12
+   max-lsa 12000
+!
+end
 
 ```
 
 ### Конфигурация Leaf3:
 
 ```
+! device: Leaf3 (vEOS-lab, EOS-4.29.2F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname Leaf3
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description p2p-spine1
+   mtu 9214
+   no switchport
+   ip address 10.0.2.5/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet2
+   description p2p-spine2
+   mtu 9214
+   no switchport
+   ip address 10.0.2.11/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Loopback0
+   description Router-ID
+   ip address 10.0.0.13/32
+!
+interface Loopback1
+   description VTEP
+   ip address 10.0.1.13/32
+!
+interface Management1
+!
+ip routing
+!
+router ospf 1
+   router-id 10.0.0.13
+   max-lsa 12000
+!
+end
 
 ```
