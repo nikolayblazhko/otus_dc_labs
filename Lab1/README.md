@@ -20,33 +20,34 @@
 
 # Таблица адресации:
 
-| Device   | Interface   | IP address   | Description          |
-|:---------|:------------|:-------------|:---------------------|
-| Spine 1  | Loopback1   | 10.1.1.0/32  | Loopback1 (Underlay) |
-|          | Loopback2   | 10.1.11.0/32 | Loopback2 (VTEP)     |
-|          | Eth1        | 10.1.1.2/31  | to leaf1 (P2P)       |
-|          | Eth2        | 10.1.1.4/31  | to leaf2 (P2P)       |
-|          | Eth3        | 10.1.1.6/31  | to leaf3 (P2P)       |
-|          |             |              |                      |
-| Spine 2  | Loopback1   | 10.1.2.0/32  | Loopback1 (Underlay) |
-|          | Loopback2   | 10.1.22.0/32 | Loopback2 (VTEP)     |
-|          | Eth1        | 10.1.2.2/31  | to leaf1 (P2P)       |
-|          | Eth2        | 10.1.2.4/31  | to leaf2 (P2P)       |
-|          | Eth3        | 10.1.2.6/31  | to leaf3 (P2P)       |
-|          |             |              |                      |
-| Leaf1    | Loopback1   | 10.1.3.0/32  | Loopback1 (Underlay) |
-|          | Loopback2   | 10.1.12.0/32 | Loopback2 (VTEP)     |
-|          | Eth1        | 10.1.1.3/31  | to spine1 (P2P)      |
-|          | Eth2        | 10.1.2.3/31  | to spine2 (P2P)      |
-|          |             |              |                      |
-| Leaf2    | Loopback1   | 10.1.4.0/32  | Loopback1 (Underlay) |
-|          | Loopback2   | 10.1.13.0/32 | Loopback2 (VTEP)     |
-|          | Eth1        | 10.1.1.5/31  | to spine1 (P2P)      |
-|          | Eth2        | 10.1.2.5/31  | to spine2 (P2P)      |
-|          |             |              |                      |
-| Leaf3    | Loopback1   | 10.1.5.0/32  | Loopback1 (Underlay) |
-|          | Loopback2   | 10.1.14.0/32 | Loopback2 (VTEP)     |
-|          | Eth1        | 10.1.1.7/31  | to spine1 (P2P)      |
-|          | Eth2        | 10.1.2.7/31  | to spine2 (P2P)      |
+
+| Device  | Interface    | IP Address     | Description                |
+|:--------|:-------------|:---------------|:---------------------------|
+| Spine1  | Loopback0    | 10.0.0.1/32    | Underlay BGP Router-ID     |
+|         | Loopback1    | 10.0.1.1/32    | VTEP        |
+|         | Ethernet1/1  | 10.0.2.0/31    | P2P линк к Leaf1          |
+|         | Ethernet1/2  | 10.0.2.2/31    | P2P линк к Leaf2          |
+|         | Ethernet1/3  | 10.0.2.4/31    | P2P линк к Leaf3          |
+|         |              |                |                            |
+| Spine2  | Loopback0    | 10.0.0.2/32    | Underlay BGP Router-ID     |
+|         | Loopback1    | 10.0.1.2/32    | VTEP       |
+|         | Ethernet1/1  | 10.0.2.6/31    | P2P линк к Leaf1          |
+|         | Ethernet1/2  | 10.0.2.8/31    | P2P линк к Leaf2          |
+|         | Ethernet1/3  | 10.0.2.10/31   | P2P линк к Leaf3          |
+|         |              |                |                            |
+| Leaf1   | Loopback0    | 10.0.0.11/32   | Underlay BGP Router-ID     |
+|         | Loopback1    | 10.0.1.11/32   | VTEP address  |
+|         | Ethernet1/1  | 10.0.2.1/31    | P2P линк к Spine1         |
+|         | Ethernet1/2  | 10.0.2.7/31    | P2P линк к Spine2         |
+|         |              |                |                            |
+| Leaf2   | Loopback0    | 10.0.0.12/32   | Underlay BGP Router-ID     |
+|         | Loopback1    | 10.0.1.12/32   | VTEP address  |
+|         | Ethernet1/1  | 10.0.2.3/31    | P2P линк к Spine1         |
+|         | Ethernet1/2  | 10.0.2.9/31    | P2P линк к Spine2         |
+|         |              |                |                            |
+| Leaf3   | Loopback0    | 10.0.0.13/32   | Underlay BGP Router-ID     |
+|         | Loopback1    | 10.0.1.13/32   | VTEP address   |
+|         | Ethernet1/1  | 10.0.2.5/31    | P2P линк к Spine1         |
+|         | Ethernet1/2  | 10.0.2.11/31   | P2P линк к Spine2         |
 
 1
