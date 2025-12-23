@@ -406,11 +406,11 @@ end
 
     1.1. На Spine1:
 
-         ![Схема](Spine1_sh_nei.jpg)
+         ![Схема](spine1_sh_nei.jpg)
 
     1.2. На Spine2:
 
-         ![Схема](Spine2_sh_nei.jpg)
+         ![Схема](spine2_sh_nei.jpg)
 
     1.3. На Leaf1:
 
