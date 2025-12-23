@@ -408,21 +408,67 @@ end
 
     ![Схема1](Spine1_sh_nei.jpg)
 
+    ✅Все Leaf-узлы видны
+
     1.2. На Spine2:
 
     ![Схема2](Spine2_sh_nei.jpg)
+
+    ✅Все Leaf-узлы видны
 
     1.3. На Leaf1:
 
     ![Схема3](Leaf1_sh_nei.jpg)
 
+    ✅Все Spine-узлы видны
+
     1.4. На Leaf2:
 
     ![Схема4](Leaf2_sh_nei.jpg)
 
+    ✅Все Spine-узлы видны
+
     1.5. На Leaf3:
 
     ![Схема5](Leaf3_sh_nei.jpg)
+
+    ✅Все Spine-узлы видны
+
+2. Проверка доступности Loopback-интерфейсов:
+
+    2.1. На Spine1:
+
+    ![Схема1](Spine1_ping.jpg)
+
+    ✅Все Leaf-узлы отвечают
+
+    2.2. На Spine2:
+
+    ![Схема1](Spine2_ping.jpg)
+
+    ✅Все Leaf-узлы отвечают
+
+    2.3. На Leaf1:
+
+    ![Схема1](Leaf1_ping.jpg)
+
+    ✅Все Spine-узлы отвечают
+
+    2.4. На Leaf2:
+
+    ![Схема1](Leaf2_ping.jpg)
+
+    ✅Все Spine-узлы отвечают
+
+    2.5. На Leaf3:
+
+    ![Схема1](Leaf3_ping.jpg)
+
+    ✅Все Spine-узлы отвечают
+
+    
+
+    
 
     
         
