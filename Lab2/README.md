@@ -383,3 +383,10 @@ router ospf 1
 end
 
 ```
+
+### Проверка:
+
+1. Вывод команды sh ip ospf neighbor:
+
+    1.1. На Spine1:
+         ![Схема](Spine1_sh_nei.jpg)
