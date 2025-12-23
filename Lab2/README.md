@@ -101,10 +101,12 @@ interface Ethernet8
 interface Loopback0
    description Router-ID
    ip address 10.0.0.1/32
+   ip ospf area 0.0.0.0
 !
 interface Loopback1
    description VTEP
    ip address 10.0.1.1/32
+   ip ospf area 0.0.0.0
 !
 interface Management1
 !
@@ -116,11 +118,13 @@ router ospf 1
 !
 end
 
+
 ```
 
 ### Конфигурация Spine2:
 
 ```
+
 ! device: Spine2 (vEOS-lab, EOS-4.29.2F)
 !
 ! boot system flash:/vEOS-lab.swi
@@ -172,10 +176,12 @@ interface Ethernet8
 interface Loopback0
    description Router-ID
    ip address 10.0.0.2/32
+   ip ospf area 0.0.0.0
 !
 interface Loopback1
    description VTEP
    ip address 10.0.1.2/32
+   ip ospf area 0.0.0.0
 !
 interface Management1
 !
@@ -186,6 +192,7 @@ router ospf 1
    max-lsa 12000
 !
 end
+
 
 ```
 
@@ -237,10 +244,12 @@ interface Ethernet8
 interface Loopback0
    description Router-ID
    ip address 10.0.0.11/32
+   ip ospf area 0.0.0.0
 !
 interface Loopback1
    description VTEP
    ip address 10.0.1.11/32
+   ip ospf area 0.0.0.0
 !
 interface Management1
 !
@@ -251,6 +260,7 @@ router ospf 1
    max-lsa 12000
 !
 end
+
 
 ```
 
@@ -302,10 +312,12 @@ interface Ethernet8
 interface Loopback0
    description Routed-ID
    ip address 10.0.0.12/32
+   ip ospf area 0.0.0.0
 !
 interface Loopback1
    description VTEP
    ip address 10.0.1.12/32
+   ip ospf area 0.0.0.0
 !
 interface Management1
 !
@@ -316,6 +328,7 @@ router ospf 1
    max-lsa 12000
 !
 end
+
 
 ```
 
@@ -367,10 +380,12 @@ interface Ethernet8
 interface Loopback0
    description Router-ID
    ip address 10.0.0.13/32
+   ip ospf area 0.0.0.0
 !
 interface Loopback1
    description VTEP
    ip address 10.0.1.13/32
+   ip ospf area 0.0.0.0
 !
 interface Management1
 !
@@ -382,6 +397,7 @@ router ospf 1
 !
 end
 
+
 ```
 
 ### Проверка:
@@ -389,4 +405,24 @@ end
 1. Вывод команды sh ip ospf neighbor:
 
     1.1. На Spine1:
+
          ![Схема](Spine1_sh_nei.jpg)
+
+    1.2. На Spine2:
+
+         ![Схема](Spine2_sh_nei.jpg)
+
+    1.3. На Leaf1:
+
+         ![Схема](Leaf1_sh_nei.jpg)
+
+    1.4. На Leaf2:
+
+         ![Схема](Leaf2_sh_nei.jpg)
+
+    1.5. На Leaf3:
+
+         ![Схема](Leaf3_sh_nei.jpg)
+
+    
+        
