@@ -1,0 +1,78 @@
+! device: Spine1 (vEOS-lab, EOS-4.29.2F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname Spine1
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description p2p-leaf1
+   mtu 8000
+   no switchport
+   ip address 10.0.2.0/31
+   bfd interval 1200 min-rx 1200 multiplier 3
+   isis enable UNDERLAY
+   isis bfd
+   isis network point-to-point
+!
+interface Ethernet2
+   description p2p-leaf2
+   mtu 8000
+   no switchport
+   ip address 10.0.2.2/31
+   bfd interval 1200 min-rx 1200 multiplier 3
+   isis enable UNDERLAY
+   isis bfd
+   isis network point-to-point
+!
+interface Ethernet3
+   description p2p-leaf3
+   mtu 8000
+   no switchport
+   ip address 10.0.2.4/31
+   bfd interval 1200 min-rx 1200 multiplier 3
+   isis enable UNDERLAY
+   isis bfd
+   isis network point-to-point
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Loopback0
+   description Router-ID
+   ip address 10.0.0.1/32
+   isis enable UNDERLAY
+   no isis bfd
+!
+interface Loopback1
+   description VTEP
+   ip address 10.0.1.1/32
+   isis enable UNDERLAY
+!
+interface Management1
+!
+ip routing
+!
+router isis UNDERLAY
+   net 49.0001.0000.0000.0001.00
+   is-type level-2
+   log-adjacency-changes
+   !
+   address-family ipv4 unicast
+      bfd all-interfaces
+!
+end
