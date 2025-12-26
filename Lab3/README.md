@@ -486,31 +486,31 @@ end
 
     ![Схема1](images/Spine1_sh_route.jpg)
 
-    ✅Все Leaf-узлы отвечают
+    ✅Все сети видны
 
     2.2. На Spine2:
 
     ![Схема1](images/Spine2_sh_route.jpg)
 
-    ✅Все Leaf-узлы отвечают
+    ✅Все сети видны
 
     2.3. На Leaf1:
 
     ![Схема1](images/Leaf1_sh_route.jpg)
 
-    ✅Все Spine-узлы отвечают
+    ✅Все сети видны
 
     2.4. На Leaf2:
 
     ![Схема1](images/Leaf2_sh_route.jpg)
 
-    ✅Все Spine-узлы отвечают
+    ✅Все сети видны
 
     2.5. На Leaf3:
 
     ![Схема1](images/Leaf3_sh_route.jpg)
 
-    ✅Все Spine-узлы отвечают
+    ✅Все сети видны
 
     
 
