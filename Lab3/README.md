@@ -452,7 +452,7 @@ end
 
     1.1. На Spine1:
 
-    ![Схема1](images\Spine1_sh_nei.jpg)
+    ![Схема1](images/Spine1_sh_nei.jpg)
 
     ✅Все Leaf-узлы видны
 
