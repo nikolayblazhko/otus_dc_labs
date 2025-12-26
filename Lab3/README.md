@@ -458,25 +458,25 @@ end
 
     1.2. На Spine2:
 
-    ![Схема2](images\Spine2_sh_nei.jpg)
+    ![Схема2](images/Spine2_sh_nei.jpg)
 
     ✅Все Leaf-узлы видны
 
     1.3. На Leaf1:
 
-    ![Схема3](images\Leaf1_sh_nei.jpg)
+    ![Схема3](images/Leaf1_sh_nei.jpg)
 
     ✅Все Spine-узлы видны
 
     1.4. На Leaf2:
 
-    ![Схема4](images\Leaf2_sh_nei.jpg)
+    ![Схема4](images/Leaf2_sh_nei.jpg)
 
     ✅Все Spine-узлы видны
 
     1.5. На Leaf3:
 
-    ![Схема5](images\Leaf3_sh_nei.jpg)
+    ![Схема5](images/Leaf3_sh_nei.jpg)
 
     ✅Все Spine-узлы видны
 
@@ -484,31 +484,31 @@ end
 
     2.1. На Spine1:
 
-    ![Схема1](images\Spine1_sh_route.jpg)
+    ![Схема1](images/Spine1_sh_route.jpg)
 
     ✅Все Leaf-узлы отвечают
 
     2.2. На Spine2:
 
-    ![Схема1](images\Spine2_sh_route.jpg)
+    ![Схема1](images/Spine2_sh_route.jpg)
 
     ✅Все Leaf-узлы отвечают
 
     2.3. На Leaf1:
 
-    ![Схема1](images\Leaf1_sh_route.jpg)
+    ![Схема1](images/Leaf1_sh_route.jpg)
 
     ✅Все Spine-узлы отвечают
 
     2.4. На Leaf2:
 
-    ![Схема1](images\Leaf2_sh_route.jpg)
+    ![Схема1](images/Leaf2_sh_route.jpg)
 
     ✅Все Spine-узлы отвечают
 
     2.5. На Leaf3:
 
-    ![Схема1](images\Leaf3_sh_route.jpg)
+    ![Схема1](images/Leaf3_sh_route.jpg)
 
     ✅Все Spine-узлы отвечают
 
